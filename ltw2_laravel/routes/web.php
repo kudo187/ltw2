@@ -13,7 +13,13 @@
 Route::get('/',function(){
 	return 'Hello world';
 });
+
 Route::get('sinhvien', [
 	'as' => 'student',
 	'uses' => 'StudentController@index'
+]);
+Route::get('sample', [
+	'as' => 'sample',
+	'uses' => 'SampleController@index'
+	
 ]);

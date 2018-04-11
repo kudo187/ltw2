@@ -6,12 +6,12 @@ use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 
-use App\Http\Models\students;
+use App\Http\Models\Student;
 
 class StudentController extends Controller
 {
     public function index() {
-		$obj = new students();
+		$obj = new Student();
 		$data = $obj::all();
 		
 		return view('student.index', ['data' => $data]);
